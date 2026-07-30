@@ -412,7 +412,7 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define FEATURE_SERVO  1   // Uncomment and set to 0 to explicitly disable SERVO support
 
 
-// #define USES_P001   // Switch
+#define USES_P001   // Switch
 // #define USES_P002   // ADC
 // #define USES_P003   // Pulse
 // #define USES_P004   // 1-Wire Temperature (Dallas/Maxim DS18B20)
@@ -455,7 +455,7 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 //   #define P037_MAPPING_SUPPORT 1 // Enable Value mapping support
 //   #define P037_FILTER_SUPPORT  1 // Enable filtering support
 //   #define P037_JSON_SUPPORT    1 // Enable Json support
-// #define USES_P038   // NeoPixel
+#define USES_P038   // NeoPixel
 //   #define P038_FEATURE_NEOPIXELFOR 1 // Enable NeoPixelFor/NeoPixelForHSV commands (default enabled for ESP32)
 // #define USES_P039   // Thermocouple
 
@@ -569,10 +569,10 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define USES_P129   // 74HC165 Input shiftregisters
 
 // #define USES_P131   // NeoPixel Matrix
-// #define USES_P132   // INA3221
-//   #define P132_EXTENDED 1 // Extend support with INA219, INA226, INA228, INA230, INA231 and INA260
+#define USES_P132   // INA3221
+#define P132_EXTENDED 1 // Extend support with INA219, INA226, INA228, INA230, INA231 and INA260
 // #define USES_P133   // LTR390 UV
-// #define USES_P134   // A02YYUW
+#define USES_P134   // A02YYUW
 // #define USES_P135   // SCD4x
 //   #define P135_FEATURE_RESET_COMMANDS  1 // Enable/Disable quite spacious (~950 bytes) 'selftest' and 'factoryreset' subcommands
 // #define USES_P137   // AXP192
