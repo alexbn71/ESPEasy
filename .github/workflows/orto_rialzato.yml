@@ -1,0 +1,31 @@
+name: Custom ESPEasy build
+
+on:
+  workflow_dispatch:      # ti fa comparire il pulsante "Run workflow" in Actions
+  push:
+    paths:
+      - 'src/Custom.h'    # ribuilda automaticamente se modifichi Custom.h
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install PlatformIO
+        run: pip install platformio==6.1.18
+
+      - name: Build custom environment
+        run: pio run -e custom_ESP32_4M316k
+
+      - name: Upload firmware artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OrtoRialzato-ESPEasy-firmware
+          path: .pio/build/custom_ESP32_4M316k/
