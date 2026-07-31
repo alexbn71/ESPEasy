@@ -445,7 +445,7 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 
 // #define USES_P031   // SHT1x
 // #define USES_P032   // MS5611 (GY-63)
-// #define USES_P033   // Dummy Device
+#define USES_P033   // Dummy Device
 // #define USES_P034   // DHT12
 // #define USES_P036   // OLED SSD1306/SH1106 Framed
 // #define P036_FEATURE_DISPLAY_PREVIEW   1 // Enable Preview feature, shows on-display content on Devices overview page
