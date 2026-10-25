@@ -81,12 +81,14 @@ A hardware serial port is recommended. Select the RX and TX GPIO pins the module
 
 * **Touch (WAKEUP)**: Optional input GPIO connected to the WAKEUP output of the module (see *Wiring* above).
 
-* **Baud rate**: Speed of the serial connection, 9600 to 115200 baud. Factory setting of the modules: ``57600``.
+* **Baud rate**: Speed of the serial connection, 9600 to 115200 baud. It must match the speed set in the module, the plugin doesn't change it. Factory setting of the modules: ``57600``.
 
 Module
 ^^^^^^
 
-* **Password** and **Address**: Only needed when they were changed in the module. Factory settings: password ``0x00000000``, address ``0xFFFFFFFF``.
+* **Password** and **Address**: Only needed when they were changed in the module, e.g. with the tools of the manufacturer: enter the same values here, the plugin doesn't change them. Factory settings: password ``0x00000000``, address ``0xFFFFFFFF``.
+
+.. warning:: The module keeps its password and address in its own flash memory and has no factory reset. A module whose password or address was changed and then lost doesn't answer anymore, and can only be recovered by trying all the possible values. Write down any value set in the module before changing it.
 
 Scan
 ^^^^
